@@ -30,8 +30,8 @@ Things you may want to cover:
 |password|string|null: false|
 
 ### Asociation
--belong_to :Group, through: :user_group
--has_many :tweet
+- belong_to :Group, through: :user_group
+- has_many :tweet
 
 ## groupテーブル
 |Column|Type|Options|
@@ -39,8 +39,8 @@ Things you may want to cover:
 |name|text|null: false|
 
 ### Asociation
--has_many :user, through: :user_group
--has_many :tweet, dependent: :destroy
+- has_many :user, through: :user_group
+- has_many :tweet, dependent: :destroy
 
 ## tweetテーブル
 |Column|Type|Options|
@@ -51,8 +51,8 @@ Things you may want to cover:
 |group_id|integer|null: false, foreign_key: true|
 
 ### Asociation
--belong_to :group
--belong_to :user
+- belong_to :group
+- belong_to :user
 
 ## user_groupテーブル
 |Column|Type|Options|
