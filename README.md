@@ -21,41 +21,43 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* 
-## userテーブル
+# chatspace DB設計
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
 |email|text|null: false, unique: true|
 |password|string|null: false|
-
 ### Asociation
-- belong_to :Group, through: :user_group
-- has_many :tweet
+- has_many :users_groups
+- has_many :groups, through: :users_groups
+- has_many :tweets
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|text|null: false|
-
 ### Asociation
-- has_many :user, through: :user_group
-- has_many :tweet, dependent: :destroy
+- has_many :users_groups
+- has_many :users, through: :users_groups
+- has_many :tweets, dependent: :destroy
 
-## tweetテーブル
+## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |tweet|text||
 |image|string||
 |user_id|integer||null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-
 ### Asociation
-- belong_to :group
-- belong_to :user
+- belong_to :groups
+- belong_to :users
 
-## user_groupテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+### Asociation
+- belong_to :users
+- belong_to :groups
