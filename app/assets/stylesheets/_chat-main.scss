@@ -6,7 +6,9 @@
     height: 100px;
     width: 100%;
     border-bottom: #eeeeee;
-  }
+    display: flex;
+    .left-items{
+    }
   &__messege-list{
     height: calc(100vh - 100px - 90px);
     width: 100%;
@@ -18,4 +20,5 @@
     width: 100%;
     bottom: 0;
   }
+}
 }
