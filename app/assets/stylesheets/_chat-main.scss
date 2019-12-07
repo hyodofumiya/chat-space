@@ -33,16 +33,37 @@
         }
     }
   }
-  &__messege-list{
+  &__tweet-lists{
     height: calc(100vh - 100px - 90px);
     width: 100%;
-    background-color: red;
+    padding: 35px 0 0 40px;
+    .tweet-list{
+      margin-bottom: 46px;
+      &__top-items{
+        display: flex;
+        margin-bottom: 12px;
+        .user-name{
+          color: #333333;
+          font-size: 16px;
+        }
+        .submit-date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__tweet{
+        color: #434a54;
+        font-size: 14px;
+      }
+    }
   }
   &__messege-form{
     background-color: #d2d2d2;
     height: 90px;
     width: 100%;
     bottom: 0;
+
   }
   
 }

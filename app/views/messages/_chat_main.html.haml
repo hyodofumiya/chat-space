@@ -10,5 +10,20 @@
     .edit-btn
       = link_to "#", class: "btn" do
         ="Edit"
-  .chat-main__messege-list
-  .chat-main__messege-form
+  .chat-main__tweet-lists
+    .tweet-list
+      .tweet-list__top-items
+        .user-name
+          ユーザー名
+        .submit-date
+          投稿日時
+      .tweet-list__tweet
+        ツイート内容
+  .chat-main__tweet-input-form
+    .input-form
+      .input-form__write-box
+      .input-form__pic-choice-btn
+    .send-btn
+      = link_to "#" ,class: "send-btn__link" do
+        ="Send"
+
