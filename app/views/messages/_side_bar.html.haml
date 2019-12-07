@@ -1,0 +1,17 @@
+%section.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__user-name
+        ユーザーネーム欄
+      .top-items__icons
+        = link_to "#", class: "top-items__icon" do 
+          = icon('far', 'edit')
+        = link_to '#', class: "top-items__icon" do
+          = icon('fas', 'cog')
+
+  .side-bar__group-name
+    .group-lists
+      .group-lists__group-name
+        グループ名欄
+      .group-lists__group-messege
+        グループメッセージ欄
