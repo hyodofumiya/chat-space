@@ -20,10 +20,10 @@
       .tweet-list__tweet
         ツイート内容
   .chat-main__tweet-input-form
-    .input-form
-      .input-form__write-box
-      .input-form__pic-choice-btn
-    .send-btn
-      = link_to "#" ,class: "send-btn__link" do
-        ="Send"
-
+    %form(action="#" method: :post name="form" class="form")
+      .form-field
+        %input(type="text" class="form-field__tweet" row="1" font="50px" placeholder="type a messege")
+        %label(for="choose-pic-btn" class="form-field__choose-pic")
+          %input(type="file" class="choose-pic-btn" id="choose-pic-btn")
+          = icon('far','file-image')
+      %input(type="submit" value="Send" name="send-btn"  class="submit-btn")
