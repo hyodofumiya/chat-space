@@ -41,7 +41,7 @@
     background-color: #fafafa;
     .tweet{
       margin-bottom: 46px;
-      .tweet-info{
+      &__tweet-info{
         display: flex;
         margin-bottom: 12px;
         &__user-name{
@@ -84,7 +84,7 @@
           right: 10px;
           top: 10px;
           font-size: 1.3rem;
-          .choose-pic-btn{
+          &__choose-btn{
             display: none;
           }
         }
