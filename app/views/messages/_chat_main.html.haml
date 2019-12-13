@@ -11,19 +11,19 @@
       = link_to "#", class: "btn" do
         ="Edit"
   .chat-main__tweet-lists
-    .tweet-list
-      .tweet-list__top-items
-        .user-name
+    .tweet
+      .tweet-info
+        .tweet-info__user-name
           ユーザー名
-        .submit-date
+        .tweet-info__date
           投稿日時
-      .tweet-list__tweet
+      .tweet__value
         ツイート内容
   .chat-main__tweet-input-form
     %form(action="#" method: :post name="form" class="form")
-      .form-field
-        %input(type="text" class="form-field__tweet" row="1" font="50px" placeholder="type a messege")
-        %label(for="choose-pic-btn" class="form-field__choose-pic")
+      .input-field
+        %input(type="text" class="input-field__tweet" row="1" font="50px" placeholder="type a messege")
+        %label(for="choose-pic-btn" class="input-field__pic")
           %input(type="file" class="choose-pic-btn" id="choose-pic-btn")
           = icon('far','file-image')
-      %input(type="submit" value="Send" name="send-btn"  class="submit-btn")
+      %input(type="submit" value="Send" name="send-btn"  class="form__submit-btn")
