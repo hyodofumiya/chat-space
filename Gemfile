@@ -57,3 +57,5 @@ gem 'erb2haml'
 
 #Use FontAwesome
  gem 'font-awesome-sass'
+#Use devise
+gem 'devise'
