@@ -27,7 +27,7 @@
         border:1px solid #38aef0;
         line-height: 40px;
         margin: 28px 40px 32px 0;
-        .btn{
+        &__btn{
           display: inline;
           text-decoration: none;
           color: #38aef0;
@@ -41,7 +41,7 @@
     background-color: #fafafa;
     .tweet{
       margin-bottom: 46px;
-      &__tweet-info{
+      &__info{
         display: flex;
         margin-bottom: 12px;
         &__user-name{

@@ -2,23 +2,22 @@
   .chat-main__group-info
     .left-items
       .left-items__group-name
-        グループ名
+        group name
       .left-items__member-lists
-        メンバーリスト
+        member
         .left-items__member
-          a
     .edit-btn
-      = link_to "#", class: "btn" do
+      = link_to "#", class: "edit-btn__btn" do
         ="Edit"
   .chat-main__tweet-lists
     .tweet
       .tweet__info
         .tweet__info__user-name
-          ユーザー名
+          yu-za
         .tweet__info__date
-          投稿日時
+          date
       .tweet__value
-        ツイート内容
+        tweet内容
   .chat-main__tweet-input-form
     %form(action="#" method: :post name="form" class="form")
       .input-field
