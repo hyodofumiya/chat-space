@@ -1,0 +1,101 @@
+@mixin chat-main-width {
+  width: calc(100vw - 300px);
+}
+.chat-main{
+  @include chat-main-width();
+  height: 100vh;
+  &__group-info{
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    border-bottom: #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    .left-items{
+      margin: 35px 0  0 40px;
+      &__group-name{
+        font-size: 20px;
+        color: $blackFontColor;
+      }
+      &__member-lists{
+        font-size:12px;
+        color: #999999;
+        margin-top: 15px;
+        display: flex;
+      }
+    }
+    .edit-btn{
+        padding: 0 20px;
+        border:1px solid $skyblueColor;
+        line-height: 40px;
+        margin: 28px 40px 32px 0;
+        &__btn{
+          display: inline;
+          text-decoration: none;
+          color: $skyblueColor;
+        }
+    }
+  }
+  &__tweet-lists{
+    height: calc(100vh - 100px - 90px);
+    @include chat-main-width();
+    padding: 35px 0 0 40px;
+    background-color: #fafafa;
+    .tweet{
+      margin-bottom: 46px;
+      &__info{
+        display: flex;
+        margin-bottom: 12px;
+        &__user-name{
+          color: $blackFontColor;
+          font-size: 16px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+      &__value{
+        color: #434a54;
+        font-size: 14px;
+      }
+    }
+  }
+  &__tweet-input-form{
+    background-color: #d2d2d2;
+    height: 90px;
+    @include chat-main-width();
+    padding: 20px 40px;
+    .form{
+      display: flex;
+      height: 50px;
+      .input-field{
+        display: flex;
+        position: relative;
+        width: calc(100% - 100px);
+        height: 100%;
+        margin-right: 15px;
+        &__tweet{
+          padding: 0 15px 0 10px;
+          height: 100%;
+          width: 100%;
+        }
+        &__pic{
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-size: 1.3rem;
+          &__choose-btn{
+            display: none;
+          }
+        }
+      }
+      &__submit-btn{
+        width: 100px;
+        background-color: $skyblueColor;
+        color:  white;
+      }
+    }
+  }
+}

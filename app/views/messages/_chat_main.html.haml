@@ -1,0 +1,28 @@
+%section.chat-main
+  .chat-main__group-info
+    .left-items
+      .left-items__group-name
+        group name
+      .left-items__member-lists
+        member
+        .left-items__member
+    .edit-btn
+      = link_to "#", class: "edit-btn__btn" do
+        ="Edit"
+  .chat-main__tweet-lists
+    .tweet
+      .tweet__info
+        .tweet__info__user-name
+          ユーザー名
+        .tweet__info__date
+          date
+      .tweet__value
+        tweet内容
+  .chat-main__tweet-input-form
+    %form(action="#" method: :post name="form" class="form")
+      .input-field
+        %input(type="text" class="input-field__tweet" row="1" font="50px" placeholder="type a messege")
+        %label(for="choose-pic-btn" class="input-field__pic")
+          %input(type="file" class="input-field__pic__choose-btn" id="choose-pic-btn")
+          = icon('far','file-image')
+      %input(type="submit" value="Send" name="send-btn"  class="form__submit-btn")
