@@ -1,5 +1,8 @@
-.chat-main{
+@mixin chat-main-width {
   width: calc(100vw - 300px);
+}
+.chat-main{
+  @include chat-main-width();
   height: 100vh;
   &__group-info{
     background-color: #ffffff;
@@ -12,7 +15,7 @@
       margin: 35px 0  0 40px;
       &__group-name{
         font-size: 20px;
-        color: #333333;
+        color: $blackFontColor;
       }
       &__member-lists{
         font-size:12px;
@@ -23,19 +26,19 @@
     }
     .edit-btn{
         padding: 0 20px;
-        border:1px solid #38aef0;
+        border:1px solid $skyblueColor;
         line-height: 40px;
         margin: 28px 40px 32px 0;
         &__btn{
           display: inline;
           text-decoration: none;
-          color: #38aef0;
+          color: $skyblueColor;
         }
     }
   }
   &__tweet-lists{
     height: calc(100vh - 100px - 90px);
-    width: calc( 100vw - 300px);
+    @include chat-main-width();
     padding: 35px 0 0 40px;
     background-color: #fafafa;
     .tweet{
@@ -44,7 +47,7 @@
         display: flex;
         margin-bottom: 12px;
         &__user-name{
-          color: #333333;
+          color: $blackFontColor;
           font-size: 16px;
         }
         &__date{
@@ -62,7 +65,7 @@
   &__tweet-input-form{
     background-color: #d2d2d2;
     height: 90px;
-    width: calc( 100vw - 300px);
+    @include chat-main-width();
     padding: 20px 40px;
     .form{
       display: flex;
@@ -90,7 +93,7 @@
       }
       &__submit-btn{
         width: 100px;
-        background-color: #38aef0;
+        background-color: $skyblueColor;
         color:  white;
       }
     }
