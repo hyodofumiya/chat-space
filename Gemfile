@@ -59,3 +59,5 @@ gem 'erb2haml'
  gem 'font-awesome-sass'
 #Use devise
 gem 'devise'
+#Use carrierwave
+gem 'carrierwave'
