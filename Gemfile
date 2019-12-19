@@ -59,5 +59,3 @@ gem 'erb2haml'
  gem 'font-awesome-sass'
 #Use devise
 gem 'devise'
-#Use bindig.pry
-gem 'pry-rails'
