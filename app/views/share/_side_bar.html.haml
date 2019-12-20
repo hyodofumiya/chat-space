@@ -10,8 +10,10 @@
           = icon('fas', 'cog')
 
   .side-bar__group-name
-    .group-lists
-      .group-lists__group-name
-        グループ名欄
-      .group-lists__group-messege
-        グループメッセージ欄
+    - current_user.groups.each do |group|
+      .group-lists
+        = link_to '#' do
+          .group-lists__group-name
+            = group.name
+          .group-lists__group-messege
+            グループメッセージ欄'
