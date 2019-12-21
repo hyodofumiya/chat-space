@@ -4,14 +4,16 @@
       .top-items__user-name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "top-items__icon" do 
+        = link_to new_group_path, class: "top-items__icon" do 
           = icon('far', 'edit')
         = link_to edit_user_path(current_user), class: "top-items__icon" do
           = icon('fas', 'cog')
 
   .side-bar__group-name
-    .group-lists
-      .group-lists__group-name
-        グループ名欄
-      .group-lists__group-messege
-        グループメッセージ欄
+    - current_user.groups.each do |group|
+      .group-lists
+        = link_to '#' do
+          .group-lists__group-name
+            = group.name
+          .group-lists__group-messege
+            グループメッセージ欄'
