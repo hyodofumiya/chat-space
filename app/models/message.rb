@@ -3,5 +3,5 @@ class Message < ApplicationRecord
   belong_to: group
 
   mount_uploader :image, ImageUploader
-  validates :tweet, presence: true, unless: :image?
+  validates :message, presence: true, unless: :image?
 end

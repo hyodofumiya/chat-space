@@ -1,19 +1,15 @@
-class MessagesController < ApplicationController
+class TweetsController < ApplicationController
   before_action :set_group
 
   def index
-    @message = Message.new
+    @message = message.new
     @messages = @group.messages.includes(:user)
   end
 
   def create
-    @message = @group.message.new(message_params)
+    @message = @group.message.new(tweet_params)
     if @message.save
-      redirect_to group_messages_path(@message), notice: 'メッセージが送信されました'
-    else
-      @messages = @group.message.includes(:user)
-      flash.now[:alart] = 'メッセージを入力してください'
-      render :index
+      redirect_to group_tweets_path(@message), notice: 'メッセージが送信されました'
   end
   
   private

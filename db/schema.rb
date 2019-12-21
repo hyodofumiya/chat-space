@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20191221063918) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "messages", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "tweets", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "tweet",      limit: 65535
     t.string   "image"
     t.integer  "user_id",                  null: false
