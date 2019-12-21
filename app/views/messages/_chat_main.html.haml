@@ -19,10 +19,10 @@
       .tweet__value
         tweet内容
   .chat-main__tweet-input-form
-    %form(action="#" method: :post name="form" class="form")
+    = form_for @tweet,(name: "form" class: "form") do |f|
       .input-field
-        %input(type="text" class="input-field__tweet" row="1" font="50px" placeholder="type a messege")
-        %label(for="choose-pic-btn" class="input-field__pic")
-          %input(type="file" class="input-field__pic__choose-btn" id="choose-pic-btn")
+        = f.text_area(class="input-field__tweet" row="1" font="50px" placeholder="type a messege")
+        = f.label :btn (for="choose-pic-btn" class="input-field__pic")
+          = f.file :btn (class="input-field__pic__choose-btn" id="choose-pic-btn")
           = icon('far','file-image')
-      %input(type="submit" value="Send" name="send-btn"  class="form__submit-btn")
+      = f.submit "Send" (name="send-btn"  class="form__submit-btn")
