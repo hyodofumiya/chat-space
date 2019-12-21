@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-  get 'messages/index'
+  get 'tweets/index'
 
   root "groups#index"
   resources :users, only: [:edit, :update]
   resources :groups, only: [:index, :new, :create, :edit, :update] do
-    resources :messages, only: [:index, :create]
+    resources :tweets, only: [:index, :create]
   end
 end
