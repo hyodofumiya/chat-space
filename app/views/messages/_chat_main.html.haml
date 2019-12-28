@@ -10,14 +10,7 @@
       = link_to "#", class: "edit-btn__btn" do
         ="Edit"
   .chat-main__tweet-lists
-    .tweet
-      .tweet__info
-        .tweet__info__user-name
-          ユーザー名
-        .tweet__info__date
-          date
-      .tweet__value
-        tweet内容
+    = render @messages
   .chat-main__tweet-input-form
     = form_for [@group, @message] do |f|
       .form
