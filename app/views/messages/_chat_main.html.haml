@@ -2,10 +2,12 @@
   .chat-main__group-info
     .left-items
       .left-items__group-name
-        group name
+        = @group.name
       .left-items__member-lists
-        member
-        .left-items__member
+        member:
+        - @users.each do |user|
+          .left-items__member
+            =user.name
     .edit-btn
       = link_to "#", class: "edit-btn__btn" do
         ="Edit"
