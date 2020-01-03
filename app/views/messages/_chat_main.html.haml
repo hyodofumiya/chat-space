@@ -2,27 +2,23 @@
   .chat-main__group-info
     .left-items
       .left-items__group-name
-        group name
+        = @group.name
       .left-items__member-lists
-        member
-        .left-items__member
+        member:
+        - if @users.present?
+          - @users.each do |user|
+            .left-items__member
+              = user.name
     .edit-btn
-      = link_to "#", class: "edit-btn__btn" do
+      = link_to edit_group_path(@group), class: "edit-btn__btn" do
         ="Edit"
   .chat-main__tweet-lists
-    .tweet
-      .tweet__info
-        .tweet__info__user-name
-          ユーザー名
-        .tweet__info__date
-          date
-      .tweet__value
-        tweet内容
+    = render @messages
   .chat-main__tweet-input-form
-    %form(action="#" method: :post name="form" class="form")
-      .input-field
-        %input(type="text" class="input-field__tweet" row="1" font="50px" placeholder="type a messege")
-        %label(for="choose-pic-btn" class="input-field__pic")
-          %input(type="file" class="input-field__pic__choose-btn" id="choose-pic-btn")
+    = form_for [@group, @message] do |f|
+      .form
+        = f.text_field :tweet, class: "form__tweet", placeholder: "type a messege"
+        = f.label :"image", class: "form__pic" do
+          = f.file_field :'image', class: "form__pic__choose-btn"            
           = icon('far','file-image')
-      %input(type="submit" value="Send" name="send-btn"  class="form__submit-btn")
+      = f.submit "Send", class: "new_message__submit-btn"

@@ -59,5 +59,7 @@ gem 'erb2haml'
  gem 'font-awesome-sass'
 #Use devise
 gem 'devise'
-
+#Use binding.pry
 gem 'pry-rails'
+#Use carrierwave
+gem 'carrierwave'
