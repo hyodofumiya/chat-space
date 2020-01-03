@@ -5,11 +5,12 @@
         = @group.name
       .left-items__member-lists
         member:
-        - @users.each do |user|
-          .left-items__member
-            =user.name
+        - if @users.present?
+          - @users.each do |user|
+            .left-items__member
+              = user.name
     .edit-btn
-      = link_to "#", class: "edit-btn__btn" do
+      = link_to edit_group_path(@group), class: "edit-btn__btn" do
         ="Edit"
   .chat-main__tweet-lists
     = render @messages
@@ -17,7 +18,7 @@
     = form_for [@group, @message] do |f|
       .form
         = f.text_field :tweet, class: "form__tweet", placeholder: "type a messege"
-        = f.label :"choose-pic-btn", class: "form__pic" do
-          = f.file_field :'choose-pic-btn', class: "form__pic__choose-btn"            
+        = f.label :"image", class: "form__pic" do
+          = f.file_field :'image', class: "form__pic__choose-btn"            
           = icon('far','file-image')
       = f.submit "Send", class: "new_message__submit-btn"
