@@ -5,6 +5,6 @@ FactoryBot.define do
     name = Faker::Name.name
     email = Faker::Internet.free_email
     password {password}
-    password_comfirmation {password}
+    password_confirmation {password}
   end
 end
