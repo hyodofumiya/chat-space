@@ -42,7 +42,7 @@ Things you may want to cover:
 - has_many :users, through: :users_groups
 - has_many :tweets
 
-## tweetsテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |tweet|text||
