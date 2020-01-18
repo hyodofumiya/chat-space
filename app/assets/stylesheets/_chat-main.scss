@@ -37,10 +37,11 @@
     }
   }
   &__tweet-lists{
-    height: calc(100vh - 100px - 90px);
+    height: calc(100% - 100px - 90px);
     @include chat-main-width();
     padding: 35px 0 0 40px;
     background-color: #fafafa;
+    overflow: scroll;
     .message{
       margin-bottom: 46px;
       &__info{
