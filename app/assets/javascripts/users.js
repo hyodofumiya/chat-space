@@ -58,7 +58,7 @@ $(function(){
       });
   });
 
-  $('#user-search-result').on("click",'.user-search-add', function() {
+  $(document).on("click",'.user-search-add', function() {
     const userId = $(this).attr('data-user-id');
     const userName = $(this).attr('data-user-name');
     $(this).parent().remove();
@@ -66,7 +66,7 @@ $(function(){
     addMember(userId);
     });
 
-  $(document).on("click", '.js-remove-btn', function() {
+  $(document).on("click", '.chat-group-user__btn--remove', function() {
     $(this).parent().remove();
   });
 });
