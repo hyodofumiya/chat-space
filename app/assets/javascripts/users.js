@@ -67,7 +67,6 @@ $(function(){
     });
 
   $(document).on("click", '.chat-group-user__btn--remove', function() {
-    console.log(this)
     $(this).parent().remove();
   });
 });
