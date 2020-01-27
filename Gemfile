@@ -78,3 +78,4 @@ gem 'pry-rails'
 #Use carrierwave
 gem 'carrierwave'
 gem 'rspec-rails'
+gem 'fog-aws'
