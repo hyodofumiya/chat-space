@@ -33,14 +33,15 @@
     background-color: #2f3e51;
     .group-lists{
       padding: 20px 20px 40px;
-      color: #ffffff;
-      font: bold;
-      &__group-name{
-        margin-bottom: 5px;
-        font-size: 15px;
-      }
-      &__group-messege{
-        font-size: 11px;
+      &__info{
+        color: white;
+        &--group-name{
+          margin-bottom: 5px;
+          font-size: 15px;
+        }
+        &--group-messege{
+          font-size: 11px;
+        }
       }
     }
   }
